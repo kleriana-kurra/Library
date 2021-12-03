@@ -1,0 +1,16 @@
+objects = Main.o Implementation.o 
+
+exe : $(objects)
+	gcc $(objects) -o exe
+
+Main.o : Main.c 
+	gcc -c Main.c 
+
+Implementation.o : Implementation.c 
+	gcc -c Implementation.c     
+
+run : 
+	./exe test.txt
+
+clean : 
+	rm exe $(objects)
