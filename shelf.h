@@ -1,14 +1,17 @@
 #ifndef SHELF_H
 #define SHELF_H
 #include <iostream>
+#include "book.h"
 
 using namespace std;
 
 class Shelf
 {
+    int NMAX;
+    Book ** book;
     public :
-        Shelf(){cout << "By Contractor : A Shelf was built" << endl;}
-        ~Shelf(){cout << "By Destractor : A Shelf was destroyed" << endl;}
+        Shelf(const int &);
+        ~Shelf();
 
 };
 

@@ -7,8 +7,8 @@ using namespace std;
 class BookcaseBase
 {
     public :
-        BookcaseBase(){cout << "By Constractor : A Bookcase base base was built." << endl;}
-        ~BookcaseBase(){cout << "By Destractor : A Bookcase base base was destroyed" << endl;}
+        BookcaseBase(){cout << "A new BookcaseBase has been created." << endl;}
+        ~BookcaseBase(){cout << "A BookcaseBase to be destroyed." << endl;}
 
 };
 

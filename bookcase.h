@@ -1,15 +1,22 @@
 #ifndef BOOKCASE_H
 #define BOOKCASE_H
 #include <iostream>
+#include "bookcaseBase.h"
+#include "cabinet.h"
+#include "shelf.h"
 
 using namespace std;
+#define BOOKCASESHELVESNUMBER 3
 
 class Bookcase
 {
+    BookcaseBase bookcaseBase;
+    Cabinet cabinet;
+    Shelf *shelf[BOOKCASESHELVESNUMBER];
 
     public :
-        Bookcase(){cout << "By Constractor : A Bookcase was built." << endl;}
-        ~Bookcase(){cout << "By Destractor : A Bookcase was destroyed" << endl;}
+        Bookcase(const int &);
+        ~Bookcase();
 };
 
 #endif

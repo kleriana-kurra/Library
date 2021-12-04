@@ -11,11 +11,13 @@ class Book
     int ISBN;
 
     public :
-        Book(string title , string nameSurenameOfAuthor, int ISBN):title(title), nameSurenameOfAuthor(nameSurenameOfAuthor), ISBN(ISBN){}
+        Book(const string & title , const string & nameSurenameOfAuthor, const int & ISBN):title(title), nameSurenameOfAuthor(nameSurenameOfAuthor), ISBN(ISBN){}
         ~Book();
+
         void setTitle(const string & title){this->title = title;}
-        void setNameSurenameOfAuthor(const string & NameSurenameOfAuthor){this->nameSurenameOfAuthor = nameSurenameOfAuthor;}
+        void setNameSurenameOfAuthor(const string & nameSurenameOfAuthor){this->nameSurenameOfAuthor = nameSurenameOfAuthor;}
         void setISBN(const int & ISBN){this->ISBN = ISBN;}
+
         string getTitle() const{return title;}
         string getNameSurenameOfAuthor() const{return nameSurenameOfAuthor;}
         int getISBN() const{return ISBN;}

@@ -1,14 +1,19 @@
 #ifndef CABINET_H
 #define CABINET_H
 #include <iostream>
+#include "shelf.h"
 
 using namespace std;
+#define CABINETSHELVESNUMBER 2
 
 class Cabinet
 {
+    Shelf *shelf[CABINETSHELVESNUMBER];
+    
     public :
-        Cabinet(){cout << "By Constractor : A Cabinet was built" << endl;}
-        ~Cabinet(){cout << "By Destractor : A Cabinet was destroyed" << endl;}
+    
+        Cabinet(const int &);
+        ~Cabinet();
 };
 
 #endif
