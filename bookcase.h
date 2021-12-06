@@ -13,10 +13,13 @@ class Bookcase
     BookcaseBase bookcaseBase;
     Cabinet cabinet;
     Shelf *shelf[BOOKCASESHELVESNUMBER];
+    int numberOfBooks;
 
     public :
         Bookcase(const int &);
         ~Bookcase();
+        
+        bool place_book(const int &, Book &);
 };
 
 #endif

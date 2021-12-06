@@ -13,6 +13,8 @@ class Shelf
         Shelf(const int &);
         ~Shelf();
 
+        bool place_book(Book &);
+
 };
 
 #endif

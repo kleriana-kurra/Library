@@ -5,7 +5,7 @@ PROGRAM = exe
 CC = g++ 
 CFLAGS = -Wall -W
 
-$(PROGRAM): clean $(OBJS) $(PROGRAM)
+$(PROGRAM): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(PROGRAM)
 
 main.o: main.cpp
@@ -33,4 +33,4 @@ run:
 	./exe 5 10 15 20
 
 val:
-	valgrind --leak-check=full ./exe
+	valgrind --leak-check=full ./exe 5 10 15 20

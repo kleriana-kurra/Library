@@ -14,6 +14,8 @@ class Cabinet
     
         Cabinet(const int &);
         ~Cabinet();
+
+        bool place_book(const int & , Book &);
 };
 
 #endif

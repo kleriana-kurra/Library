@@ -11,8 +11,10 @@ class Book
     int ISBN;
 
     public :
-        Book(const string & title , const string & nameSurenameOfAuthor, const int & ISBN):title(title), nameSurenameOfAuthor(nameSurenameOfAuthor), ISBN(ISBN){}
-        ~Book();
+        Book(const string & title , const string & nameSurenameOfAuthor, const int & ISBN):title(title), nameSurenameOfAuthor(nameSurenameOfAuthor), ISBN(ISBN)
+        {
+            cout << "Book created with title = " << this->title << " name = " << this->nameSurenameOfAuthor << " ISBN = " << this->ISBN << endl;
+        }
 
         void setTitle(const string & title){this->title = title;}
         void setNameSurenameOfAuthor(const string & nameSurenameOfAuthor){this->nameSurenameOfAuthor = nameSurenameOfAuthor;}

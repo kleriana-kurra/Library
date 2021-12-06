@@ -20,3 +20,19 @@ Cabinet :: ~Cabinet()
         delete shelf[i];
     }
 }
+
+bool Cabinet :: place_book(const int & placeNumber, Book & book)
+{
+    switch (placeNumber)
+    {
+    case 1 :
+        return this->shelf[0]->place_book(book);
+        break;
+    case 2 :
+        return this->shelf[1]->place_book(book);
+        break;
+    default:
+        cout << "ERROR : Give 1 or 2." << endl;
+        return false;
+    }
+}
