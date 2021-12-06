@@ -16,6 +16,9 @@ class Shelf
         ~Shelf();
 
         bool place_book(Book &);
+        bool take_book();
+
+        void print();
 
 };
 

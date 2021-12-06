@@ -20,6 +20,9 @@ class Bookcase
         ~Bookcase();
         
         bool place_book(const int &, Book &);
+        bool take_book(const int &);
+
+        void print();
 };
 
 #endif

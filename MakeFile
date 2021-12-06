@@ -30,7 +30,7 @@ clean:
 	rm -f $(OBJS) $(PROGRAM)
 
 run:
-	./exe 5 10 15 20
+	./exe 5 10 11 5
 
 val:
-	valgrind --leak-check=full ./exe 5 10 15 20
+	valgrind --leak-check=full ./exe 5 10 11 5

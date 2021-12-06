@@ -24,7 +24,7 @@ class Book
         string getNameSurenameOfAuthor() const{return nameSurenameOfAuthor;}
         int getISBN() const{return ISBN;}
 
-        void print(){cout << "Title : " << title << " Name/Surename of Author : " << nameSurenameOfAuthor << " ISBN : " << ISBN << endl;}
+        void print(){cout << '\t' << '\t' << '\t' << "Title : " << title << " Name/Surename of Author : " << nameSurenameOfAuthor << " ISBN : " << ISBN << endl;}
 };
 
 #endif

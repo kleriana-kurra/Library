@@ -33,3 +33,31 @@ bool Shelf :: place_book(Book & book)
     return false;
 }
 
+bool Shelf :: take_book()
+{
+    for(int i = 0; i < NMAX; i ++)
+    {
+        if(this->book[i] != NULL)
+        {
+            this->book[i] = NULL;
+            numberOfBooks--;
+            return true;
+        }
+    }
+    return false;
+}
+
+void Shelf :: print()
+{
+    for(int i = 0; i < NMAX; i ++)
+    {
+        if(this->book[i] != NULL)
+        {
+            this->book[i]->print();
+        }
+        else
+        {
+            cout << '\t' << '\t' << '\t'<< "Empty place." << endl;
+        }
+    }
+}
