@@ -9,6 +9,8 @@ class Shelf
 {
     int NMAX;
     Book ** book;
+    int numberOfBooks;
+
     public :
         Shelf(const int &);
         ~Shelf();

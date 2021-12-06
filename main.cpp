@@ -24,7 +24,11 @@ int main(int argc, char* argv[])
 	cout << "                       Β. Να δημιουργεί " << L << " βιβλία." << endl;
 	cout << endl << "-----------------------------------------------------------------------------------------------------------------------------" << endl << endl ;
 
-	srand((unsigned) time(0));
+
+	cout << endl << "-----------------------------------------------------------------------------------------------------------------------------" << endl << endl ;
+	cout << "                                ~ Creating Books ~ " << endl;
+	cout << endl << "-----------------------------------------------------------------------------------------------------------------------------" << endl << endl ;
+	
 	Book *book[L];
 
 	for(int i = 0; i < L; i++)
@@ -37,11 +41,32 @@ int main(int argc, char* argv[])
 	cout << "                       Γ. Να πραγματοποιεί " << K1 << " τυχαίες τοποθετήσεις βιβλίων στη βιβλιοθήκη." << endl;
 	cout << endl << "-----------------------------------------------------------------------------------------------------------------------------" << endl << endl ;
 
+
+	int numberOfBooksToPlace = L;
+	if(L > K1)
+	{
+		numberOfBooksToPlace = K1;
+	}
+	else if(L < K1)
+	{
+		cout << "ERROR : You want to place " << K1 << " books, but you have " << L << " books. So " << L << " books will be placed." << endl;
+	}
 	
+	srand((unsigned) time(0));
+
+	for(int i = 0; i < numberOfBooksToPlace; i++)
+	{
+		int randomShelf = rand() % (5) + 1;
+		bookCase.place_book(randomShelf, *book[i]);
+	}
+
+	
+	// Deleting Books 
 	for(int i = 0; i < L; i++)
 	{
 		delete book[i];
 	}
+
 	cout << "                             --- THE PROGRAM ENDED ---                                 " << endl << endl ;
 	return 0;
 }

@@ -25,8 +25,11 @@ bool Shelf :: place_book(Book & book)
         if(this->book[i] == NULL)
         {
             this->book[i] = &book;
+            numberOfBooks++;
+            this->book[i]->print();
             return true;
         }
     }
     return false;
 }
+
