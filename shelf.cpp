@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Shelf :: Shelf(const int & NMAX):NMAX(NMAX)
+Shelf :: Shelf(const int & NMAX) : NMAX(NMAX)
 {
     book = new Book * [NMAX];
     for(int i = 0 ; i < NMAX ; i++)
@@ -30,6 +30,7 @@ bool Shelf :: place_book(Book & book)
             return true;
         }
     }
+    cout << '\t' << '\t' << '\t' << "ERROR : Shelf is full." << endl;
     return false;
 }
 
@@ -44,20 +45,28 @@ bool Shelf :: take_book()
             return true;
         }
     }
+    cout << '\t' << '\t' << '\t' << "ERROR : Shelf is empty." << endl;
     return false;
 }
 
-void Shelf :: print()
+void Shelf :: print() const
 {
-    for(int i = 0; i < NMAX; i ++)
+    if(numberOfBooks == 0)
     {
-        if(this->book[i] != NULL)
+        cout << '\t' << '\t' << '\t' << "PRINT : Shelf is empty." << endl;
+    }
+    else
+    {
+        for(int i = 0; i < NMAX; i ++)
         {
-            this->book[i]->print();
-        }
-        else
-        {
-            cout << '\t' << '\t' << '\t'<< "Empty place." << endl;
+            if(this->book[i] != NULL)
+            {
+                this->book[i]->print();
+            }
+            else
+            {
+                cout << '\t' << '\t' << '\t'<< "Empty place." << endl;
+            }
         }
     }
 }

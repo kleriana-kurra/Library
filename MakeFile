@@ -1,9 +1,9 @@
-OBJS = main.o bookcase.o bookcaseBase.o cabinet.o shelf.o book.o 
-SOURCE =  main.cpp bookcase.cpp bookcaseBase.cpp cabinet.cpp shelf.cpp book.cpp
+OBJS = main.o bookcase.o cabinet.o shelf.o 
+SOURCE =  main.cpp bookcase.cpp cabinet.cpp shelf.cpp
 HEADER = bookcase.h bookcaseBase.h cabinet.h shelf.h book.h
 PROGRAM = exe
 CC = g++ 
-CFLAGS = -Wall -W
+CFLAGS = -Wall 
 
 $(PROGRAM): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(PROGRAM)
@@ -14,17 +14,11 @@ main.o: main.cpp
 bookcase.o: bookcase.cpp
 	$(CC) $(CFLAGS) -c bookcase.cpp
 
-bookcaseBase.o: bookcaseBase.cpp
-	$(CC) $(CFLAGS) -c bookcaseBase.cpp
-
 cabinet.o: cabinet.cpp
 	$(CC) $(CFLAGS) -c cabinet.cpp
 
 shelf.o: shelf.cpp
 	$(CC) $(CFLAGS) -c shelf.cpp
-
-book.o: book.cpp
-	$(CC) $(CFLAGS) -c book.cpp
 
 clean:
 	rm -f $(OBJS) $(PROGRAM)

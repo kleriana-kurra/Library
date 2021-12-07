@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Bookcase :: Bookcase(const int & NMAX) : cabinet(NMAX)
+Bookcase :: Bookcase(const int & NMAX) : cabinet(NMAX), numberOfBooks(0)
 {
     for(int i = 0; i < BOOKCASESHELVESNUMBER ; i++)
     {
@@ -141,7 +141,7 @@ bool Bookcase :: take_book(const int & placeNumber)
     }
 }
 
-void Bookcase :: print()
+void Bookcase :: print() const
 {   
     cout << "Printing the bookcase : " << endl;
 

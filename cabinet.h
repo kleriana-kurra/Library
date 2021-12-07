@@ -18,8 +18,8 @@ class Cabinet
         bool place_book(const int & , Book &);
         bool take_book(const int &);
 
-        void print();
-        void print(const int & placeNumber);
+        void print() const;
+        void print(const int & placeNumber) const;
 };
 
 #endif
