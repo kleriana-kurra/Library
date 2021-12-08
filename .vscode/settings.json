@@ -3,5 +3,8 @@
         "iostream": "cpp",
         "*.tcc": "cpp",
         "type_traits": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "υλοποιήσει"
+    ]
 }

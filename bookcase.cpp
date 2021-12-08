@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Bookcase :: Bookcase(const int & NMAX) : cabinet(NMAX), numberOfBooks(0)
+Bookcase :: Bookcase(const int & NMAX) : cabinet(NMAX), numberOfBooks(0) 
 {
     for(int i = 0; i < BOOKCASESHELVESNUMBER ; i++)
     {
