@@ -3,7 +3,7 @@ SOURCE =  main.cpp bookcase.cpp cabinet.cpp shelf.cpp
 HEADER = bookcase.h bookcaseBase.h cabinet.h shelf.h book.h
 PROGRAM = exe
 CC = g++ 
-CFLAGS = -Wall -W
+CFLAGS = -Wall
 
 $(PROGRAM): clean $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(PROGRAM)

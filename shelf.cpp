@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Shelf :: Shelf(const int & NMAX) : NMAX(NMAX)
+Shelf :: Shelf(const int & NMAX) : NMAX(NMAX), numberOfBooks(0)
 {
     book = new Book * [NMAX];
     for(int i = 0 ; i < NMAX ; i++)
